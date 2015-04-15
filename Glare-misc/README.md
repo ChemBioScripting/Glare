@@ -1,6 +1,4 @@
-###Install(eg: systemwide install with sysprefix /usr)
-
-*NOTE: linking is prefered due easier updating(svn up .)*
+##Install
 
 - Get the themes: 
 
