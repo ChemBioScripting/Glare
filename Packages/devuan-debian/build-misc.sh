@@ -21,7 +21,7 @@ build(){
 #kde colors
 	mkdir -p "$filedir"/usr/share/kde4/apps/color-schemes
 	cd "$filedir"/usr/share/kde4/apps/color-schemes
-	ln -s ../../../themes/Glare-Misc/Kvantum/Glare/configs/Glare.colors
+	ln -s ../../../themes/Glare-Misc/kde-colorscheme/Glare.colors
 #lxqt
 	mkdir -p "$filedir"/usr/share/lxqt/themes
 	cd "$filedir"/usr/share/lxqt/themes
@@ -29,23 +29,23 @@ build(){
 #qmmp
 	mkdir -p "$filedir"/usr/share/qmmp/skins
 	#qmmp can't read symlinks...
-	cp "$filedir"/usr/share/themes/Glare-Misc/qmmp/Glare.wsz "$filedir"/usr/share/qmmp/skins/Glare.wsz
+	cp "$filedir"/usr/share/themes/Glare-Misc/winamp2.x/Glare-qmmp.wsz "$filedir"/usr/share/qmmp/skins/Glare.wsz
 #audacious
 	mkdir -p "$filedir"/usr/share/audacious/Skins
 	cd "$filedir"/usr/share/audacious/Skins
-	ln -s ../../themes/Glare-Misc/qmmp/non-branded/Glare.wsz
+	ln -s ../../themes/Glare-Misc/winamp2.x/Glare.wsz
 #mozilla
 	mkdir -p "$filedir"/usr/share/mozilla/extensions
 	cd "$filedir"/usr/share/mozilla/extensions
 	mkdir {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
 	cd {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
-	ln -s ../../../themes/Glare-Misc/app-fixes/mozilla/glarebold GlareBold@ssfgh.com
+	ln -s ../../../themes/Glare-Misc/mozilla/glarebold GlareBold@ssfgh.com
 	mkdir ../{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
 	cd ../{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
-	ln -s ../../../themes/Glare-Misc/app-fixes/mozilla/glarebold GlareBold@ssfgh.com
+	ln -s ../../../themes/Glare-Misc/mozilla/glarebold GlareBold@ssfgh.com
 	mkdir ../{3550f703-e582-4d05-9a08-453d09bdfdc6}
 	cd ../{3550f703-e582-4d05-9a08-453d09bdfdc6}
-	ln -s ../../../themes/Glare-Misc/app-fixes/mozilla/glarebold GlareBold@ssfgh.com
+	ln -s ../../../themes/Glare-Misc/mozilla/glarebold GlareBold@ssfgh.com
 #walls
 	mkdir -p "$filedir"/usr/share/backgrounds
 	cd "$filedir"/usr/share/backgrounds
@@ -64,7 +64,7 @@ build(){
 	cd "$filedir"/etc/xdg
 	mv ../../usr/share/themes/Glare-Misc/compton-config/compton.conf compton.conf
 #trolltech
-	mv ../../usr/share/themes/Glare-Misc/Kvantum/Glare/configs/Trolltech.conf Trolltech.conf
+	mv ../../usr/share/themes/Glare-Misc/qt4-colorscheme/Trolltech.conf Trolltech.conf
 #kvantum
 	mkdir ../kvantum/
 	printf "[General]\ntheme=Glare" > ../kvantum/kvantum.kvconfig

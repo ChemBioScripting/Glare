@@ -2,49 +2,68 @@
 
 *NOTE: linking is prefered due easier updating(svn up .)*
 
-- Open a Terminal, become root and get the theme: 
+- Get the themes: 
 
 ```
 svn co https://github.com/sixsixfive/Glare/trunk/Glare-misc /usr/share/themes/Glare-misc
 ```
-- If wanted change the highlight color
+- If wanted change the highlight color execute the color script!
  * needs sed, imagemagick(convert), bc, and find! - you may should install [yad](http://sourceforge.net/projects/yad-dialog) or [qarma](https://github.com/luebking/qarma), too
 
-```
-sh /usr/share/themes/Glare-misc/changecolor.sh
-```
+
+### theme dirs:
+
 - Kvantum theme
 
 ```
-ln -s /usr/share/themes/Glare-misc/Kvantum/Glare /usr/share/Kvantum/Glare
-```
+/usr/share/Kvantum/<themedir>
+~/.config/Kvantum/<themedir>
 
+```
 - KDE color scheme(this is needed for many KDE-Apps) 
 
 ```
-ln -s /usr/share/themes/Glare-misc/Kvantum/Glare/configs/Glare.colors /usr/share/kde4/apps/color-schemes/Glare.colors
+/usr/share/apps/color-schemes/<theme>.colors
+~/.kde/share/apps/color-schemes/<theme>.colors
+- Qt4 color scheme
+
 ```
- 
+/etc/xdg/Trolltech.conf
+~/.config/Trolltech.conf<theme>
+
+```
+- KDE settings(only if there is no kde installed)
+
+```
+~/.kde/share/config/kdeglobals
+
+```
+- very simple compton settings
+
+```
+/etc/xdg/compton.conf
+~/.compton.conf
+
+```
 - LXQt theme
 
 ```
-ln -s /usr/share/themes/Glare-misc/lxqt/Glare /usr/share/lxqt/themes/Glare
+/usr/share/lxqt/themes/<themedir>
 ```
 - Qmmp
 
 ```
-cp /usr/share/themes/Glare-misc/qmmp/Glare.wsz /usr/share/qmmp/skins/Glare.wsz
+/usr/share/qmmp/skins/<theme>.wsz
 ```
 - Audacious
 
 ```
-ln -s /usr/share/themes/Glare-misc/qmmp/non-branded/Glare.wsz /usr/share/audacious/Skins/Glare.wsz
+/usr/share/audacious/Skins/<theme>.wsz
 ```
-- Promoe
+- Promoe(wsz needs to be unpacked)
 
 ```
-cd /usr/share/promoe/skins
-7z x /usr/share/themes/Glare-misc/qmmp/non-branded/Glare.wsz -oGlare
+/usr/share/promoe/skins/<themedir>
 ```
 - XUL
   * just drag and drop the xpi into firefox

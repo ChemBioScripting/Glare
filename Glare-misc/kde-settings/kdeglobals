@@ -137,6 +137,9 @@ ColorScheme=Glare
 shadeSortColumn=true
 widgetStyle=kvantum
 
+[Icons]
+Theme=Ivy
+
 [KDE]
 ShowIconsInMenuItems=true
 ShowIconsOnPushButtons=true
