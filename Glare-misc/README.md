@@ -23,6 +23,7 @@ svn co https://github.com/sixsixfive/Glare/trunk/Glare-misc /usr/share/themes/Gl
 ```
 /usr/share/apps/color-schemes/<theme>.colors
 ~/.kde/share/apps/color-schemes/<theme>.colors
+```
 - Qt4 color scheme
 
 ```
