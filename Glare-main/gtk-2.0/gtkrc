@@ -32,6 +32,7 @@ include "theme/topmenur.c"
 include "theme/gimpr.c"
 include "theme/chromiumr.c"
 include "theme/thunarr.c"
+include "theme/pcmanfmr.c"
 ###fixes
 include "theme/mistr.c"
 include "theme/iconandfontfixesr.c"
