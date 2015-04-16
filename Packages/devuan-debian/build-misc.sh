@@ -58,6 +58,10 @@ build(){
 	##kde desktop is too limited for this
 	#ln -s ../themes/Glare-Misc/wppatterns/Glare_pattern_trans-01.png
 	#ln -s ../themes/Glare-Misc/wppatterns/Glare_pattern_trans-01.png.desktop
+#aurorae
+	mkdir -p "$filedir"/usr/share/kde4/aurorae/themes
+	cd "$filedir"/usr/share/kde4/aurorae/themes
+	ln -s ../../../themes/Glare-Misc/Aurorae/Glare
 ##configs
 #compton
 	mkdir -p "$filedir"/etc/xdg

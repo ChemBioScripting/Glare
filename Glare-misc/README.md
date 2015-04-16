@@ -37,6 +37,12 @@ svn co https://github.com/sixsixfive/Glare/trunk/Glare-misc /usr/share/themes/Gl
 ~/.kde/share/config/kdeglobals
 
 ```
+- Aurorae
+
+```
+/usr/share/apps/aurorae/themes/<themedir>
+~/.kde/share/apps/aurorae/themes/<themedir>
+```
 - very simple compton settings
 
 ```
