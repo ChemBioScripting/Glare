@@ -8,9 +8,9 @@
 
 ```
 ln -s Glare/extras/wmthemes/Glare-cupertino
-ln -s Glare/extras/wmthemes/Glare-cupertino-dusK
-ln -s Glare/extras/wmthemes/Glare-cupertino-dusK-x1.5-test
-ln -s Glare/extras/wmthemes/Glare-compact
+ln -s Glare/extras/wmthemes/Glare-cupertino-dusK #only for xfwm
+ln -s Glare/extras/wmthemes/Glare-cupertino-dusK-x1.5 #only for xfwm
+ln -s Glare/extras/wmthemes/Glare-compact #only for openbox
 ```
 
 - If you have the [Windowck plugin](http://goodies.xfce.org/projects/panel-plugins/xfce4-windowck-plugin) installed you can also link those two extra themes: 
@@ -98,3 +98,7 @@ make sure you disabled "apply colors to non KDE apps" (syssettings>colors>option
 ####GNOME 3
 
 GNOME isn't supported!
+
+####GTK3.16 scrollbar autohiding
+
+to disable this childish feature set the env variable GTK_OVERLAY_SCROLLING to 0
