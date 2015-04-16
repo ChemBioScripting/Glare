@@ -77,10 +77,6 @@ svn co https://github.com/sixsixfive/Glare/trunk/Glare-misc /usr/share/themes/Gl
 
 #### Kvantum
 
-* There is also a Trolltech.conf(Qt4 color scheme) in the Kvantum/configs folder
-just replace your local($HOME/.config/Trolltech.conf) file.
-(It will be updated next time you run a Qt4 app like qtconfig)
-
 * Make sure you set QT_STYLE_OVERRIDE to kvantum eg:
 
 ```
