@@ -8,7 +8,6 @@ svn co https://github.com/sixsixfive/Glare/trunk/Glare-misc /usr/share/themes/Gl
 - If wanted change the highlight color execute the color script!
  * needs sed, imagemagick(convert), bc, and find! - you may should install [yad](http://sourceforge.net/projects/yad-dialog) or [qarma](https://github.com/luebking/qarma), too
 
-
 ### theme dirs:
 
 - Kvantum theme
@@ -16,7 +15,6 @@ svn co https://github.com/sixsixfive/Glare/trunk/Glare-misc /usr/share/themes/Gl
 ```
 /usr/share/Kvantum/<themedir>
 ~/.config/Kvantum/<themedir>
-
 ```
 - KDE color scheme(this is needed for many KDE-Apps) 
 
@@ -28,14 +26,12 @@ svn co https://github.com/sixsixfive/Glare/trunk/Glare-misc /usr/share/themes/Gl
 
 ```
 /etc/xdg/Trolltech.conf
-~/.config/Trolltech.conf<theme>
-
+~/.config/Trolltech.conf
 ```
 - KDE settings(only if there is no kde installed)
 
 ```
 ~/.kde/share/config/kdeglobals
-
 ```
 - Aurorae
 
@@ -48,7 +44,6 @@ svn co https://github.com/sixsixfive/Glare/trunk/Glare-misc /usr/share/themes/Gl
 ```
 /etc/xdg/compton.conf
 ~/.compton.conf
-
 ```
 - LXQt theme
 
