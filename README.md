@@ -18,6 +18,10 @@ A bright theme that was mainly started as GUI theme for my [Ivy](https://github.
 * Aurorae theme
 * Firefox (or any other XUL app) menubar fix
 
+## Icon theme:
+
+* the icon theme is available [here](https://github.com/sixsixfive/ivy)
+
 ### How to:
 
 * [Glare-main](https://github.com/sixsixfive/Glare/blob/master/Glare-main/README.md)
