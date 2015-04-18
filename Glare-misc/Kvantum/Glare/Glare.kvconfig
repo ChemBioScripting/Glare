@@ -188,7 +188,7 @@ text.margin.top=2
 text.margin.bottom=2
 text.margin.left=5
 text.margin.right=5
-#size.minheight=22
+size.minheight=22
 
 [RadioButton]
 frame=false
@@ -247,7 +247,12 @@ text.toggle.color=#fafafa
 text.focus.color=#fafafa
 
 [ItemView]
-frame=false
+frame=true
+frame.top=0
+frame.bottom=1
+frame.left=0
+frame.right=0
+frame.element=null
 interior.element=item
 text.margin=1
 text.margin.top=2
