@@ -1,30 +1,43 @@
  #!/bin/sh
-pkgname="kvantum-tools-qt5"
+pkgname="qt5-style-kvantum"
 pkgver=$(date -u +%Y%m%d.%H%M%S)
 pkgsection="x11"
-pkgmakedepends="subversion qtbase5-dev"
-pkgshortdesc="Kvantum config tools"
-pkgdepends="libqt5core5a"
+pkgmakedepends="subversion qtbase5-dev libqt5svg5-dev libqt5x11extras5-dev libx11-dev libxext-dev"
+pkgshortdesc="SVG-based theme engine for Qt"
+pkgdepends="libqt5core5a libqt5svg5 libqt5x11extras5 libqt5widgets5 libqt5gui5 $(aptitude search -F %p libxext[0-9]$)"
 pkgconflicts=""
 pkgreplaces=""
 pkgprovides=""
 pkgrecommends=""
 pkgsuggests=""
 build() {
-	svn co https://github.com/tsujan/Kvantum/trunk/Kvantum/kvantummanager "$builddir"/kvantummanager --config-dir /tmp
-	svn co https://github.com/tsujan/Kvantum/trunk/Kvantum/kvantumpreview "$builddir"/kvantumpreview --config-dir /tmp
-	svn co https://github.com/tsujan/Kvantum/trunk/Kvantum/style/themeconfig "$builddir"/style/themeconfig --config-dir /tmp
-	cd "$builddir"/kvantumpreview
+	svn co https://github.com/tsujan/Kvantum/trunk/Kvantum/style "$builddir" --config-dir /tmp
+	###since there is no global config file
+		cat <<\EOF > etcconf.patch
+--- Kvantum.cpp	2015-04-14 18:50:50.913813642 +0200
++++ Kvantum-new.cpp	2015-04-14 18:13:23.000000000 +0200
+@@ -91,6 +91,13 @@
+     if (globalSettings.status() == QSettings::NoError && globalSettings.contains("theme"))
+       theme = globalSettings.value("theme").toString();
+   }
++  else if (QFile::exists(QString("/etc/kvantum/kvantum.kvconfig")))
++  {
++    QSettings globalSettings (QString("/etc/kvantum/kvantum.kvconfig"),QSettings::NativeFormat);
++
++    if (globalSettings.status() == QSettings::NoError && globalSettings.contains("theme"))
++      theme = globalSettings.value("theme").toString();
++  }
+ 
+   setBuiltinDefaultTheme();
+   setUserTheme(theme);
+EOF
+	patch -p0 < etcconf.patch
 	/usr/lib/$(gcc -print-multiarch)/qt5/bin/qmake
 	make
-	cd ../kvantummanager
-	/usr/lib/$(gcc -print-multiarch)/qt5/bin/qmake
-	make
-	cd "$builddir"
-	install -Dm0755 "$builddir"/kvantumpreview/kvantumpreview $filedir/usr/bin/kvantumpreview
-	install -Dm0755 "$builddir"/kvantummanager/kvantummanager $filedir/usr/bin/kvantummanager
-	install -Dm0644 "$builddir"/kvantummanager/data/kvantummanager.desktop $filedir/usr/share/applications/kvantummanager.desktop
-	install -Dm0644 "$builddir"/kvantumpreview/kvantum.svg $filedir/usr/share/pixmaps/kvantum.svg
+	install -Dm0644 "$builddir"/libkvantum.so "$filedir"/usr/lib/$(gcc -print-multiarch)/qt5/plugins/styles/libkvantum.so
+##fixme let this handle by debconf
+	#mkdir -p "$filedir"/etc/kvantum
+	#printf "[General]\ntheme=" > "$filedir"/etc/kvantum/kvantum.kvconfig
 }
 
 ########################################################################
@@ -113,7 +126,7 @@ EOF
 install_depends() {
 	dpkg --get-selections | awk '{if ($2 == "install") print $1}' > "$basedir"/installed
 	printf "trying to install build dependencies\n"
-	su-to-root -c "aptitude update; aptitude -Ry install $pkgmakedepends $pkgdepends $scriptdepends"
+	su-to-root -c "aptitude update; aptitude -R install $pkgmakedepends $pkgdepends $scriptdepends"
 	dpkg --get-selections | awk '{if ($2 == "install") print $1}' > "$basedir"/installed-new
 }
 clean(){
@@ -138,7 +151,7 @@ create_debfiles
 cd "${builddir}";build
 cd "${basedir}";package
 hostarch=$(dpkg-architecture -qDEB_HOST_ARCH)
-cd "${basedir}";clean
+cd "${basedir}"
 if [ -f ../${pkgname}_${pkgver}-1_${hostarch}.deb ]; then
 printf "Would you like to install the package now? [N/y]"; read ny
 	case $ny in
@@ -155,5 +168,6 @@ printf "Would you like to install the package now? [N/y]"; read ny
 			printf "skipped\n";;
 	esac
 fi
+clean
 printf "\n\n\ndone\n\n\n"
 sleep 5

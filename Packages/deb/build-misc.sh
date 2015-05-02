@@ -1,44 +1,79 @@
  #!/bin/sh
-pkgname="x11-gui-theme-glare-main"
+pkgname="x11-gui-theme-glare-misc"
 pkgver=$(date -u +%Y%m%d.%H%M%S)
 pkgsection="x11"
 pkgmakedepends="subversion bc imagemagick"
-pkgshortdesc="A simple and bright theme"
-pkgdepends="gtk2-engines-pixbuf gtk2-engines"
+pkgshortdesc="misc Glare themes"
+pkgdepends=""
 pkgconflicts=""
 pkgreplaces=""
 pkgprovides=""
 pkgrecommends=""
-pkgsuggests="libgtk-3-0 xfwm4 marco muffin \
-openbox xfce4-notifyd x11-icon-theme-ivy x11-gui-theme-glare-misc"
-build() {
-	svn co https://github.com/sixsixfive/Glare/trunk/Glare-main "$builddir" --config-dir /tmp
-	mkdir -p "$filedir"/usr/share/themes/Glare
-	mv "$builddir"/* "$filedir"/usr/share/themes/Glare
-	cd "$filedir"/usr/share/themes
-	ln -s Glare/extras/wmthemes/Glare-cupertino
-	ln -s Glare/extras/wmthemes/Glare-cupertino-dusK-x1.5
-	ln -s Glare/extras/wmthemes/Glare-cupertino-dusK
-	ln -s Glare/extras/wmthemes/Glare-cupertino-windowck
-	ln -s Glare/extras/wmthemes/Glare-windowck
-	ln -s Glare/extras/wmthemes/Glare-compact
-	mkdir -p "$filedir"/etc/gtk-2.0
-	cat <<EOF > "$filedir"/etc/gtk-2.0/gtkrc
-include "/usr/share/themes/Glare/gtk-2.0/gtkrc"
-gtk-icon-theme-name="Ivy"
-gtk-fallback-icon-theme="hicolor"
-gtk-toolbar-style=GTK_TOOLBAR_ICONS
-EOF
-	mkdir -p "$filedir"/etc/gtk-3.0
-	cat <<EOF > "$filedir"/etc/gtk-3.0/settings.ini
-[Settings]
-gtk-theme-name=Glare
-gtk-icon-theme-name=Ivy
-gtk-application-prefer-dark-theme=false
-gtk-button-images=true
-gtk-menu-images=true
-EOF
-	cd "$filedir"/usr/share/themes/Glare
+pkgsuggests="audacious qmmp qt4-style-kvantum qt5-style-kvantum compton"
+build(){
+	svn co https://github.com/sixsixfive/Glare/trunk/Glare-misc "$builddir" --config-dir /tmp
+	mkdir -p "$filedir"/usr/share/themes/Glare-Misc
+	mv "$builddir"/* "$filedir"/usr/share/themes/Glare-Misc
+#kvantum
+	mkdir -p "$filedir"/usr/share/Kvantum
+	cd "$filedir"/usr/share/Kvantum
+	ln -s ../themes/Glare-Misc/Kvantum/Glare
+#kde colors
+	mkdir -p "$filedir"/usr/share/kde4/apps/color-schemes
+	cd "$filedir"/usr/share/kde4/apps/color-schemes
+	ln -s ../../../themes/Glare-Misc/kde-colorscheme/Glare.colors
+#lxqt
+	mkdir -p "$filedir"/usr/share/lxqt/themes
+	cd "$filedir"/usr/share/lxqt/themes
+	ln -s ../../themes/Glare-Misc/lxqt/Glare
+#qmmp
+	mkdir -p "$filedir"/usr/share/qmmp/skins
+	#qmmp can't read symlinks...
+	cp "$filedir"/usr/share/themes/Glare-Misc/winamp2.x/Glare-qmmp.wsz "$filedir"/usr/share/qmmp/skins/Glare.wsz
+#audacious
+	mkdir -p "$filedir"/usr/share/audacious/Skins
+	cd "$filedir"/usr/share/audacious/Skins
+	ln -s ../../themes/Glare-Misc/winamp2.x/Glare.wsz
+#mozilla
+	mkdir -p "$filedir"/usr/share/mozilla/extensions
+	cd "$filedir"/usr/share/mozilla/extensions
+	mkdir {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+	cd {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+	ln -s ../../../themes/Glare-Misc/mozilla/glarebold GlareBold@ssfgh.com
+	mkdir ../{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
+	cd ../{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
+	ln -s ../../../themes/Glare-Misc/mozilla/glarebold GlareBold@ssfgh.com
+	mkdir ../{3550f703-e582-4d05-9a08-453d09bdfdc6}
+	cd ../{3550f703-e582-4d05-9a08-453d09bdfdc6}
+	ln -s ../../../themes/Glare-Misc/mozilla/glarebold GlareBold@ssfgh.com
+#walls
+	mkdir -p "$filedir"/usr/share/backgrounds
+	cd "$filedir"/usr/share/backgrounds
+	ln -s ../themes/Glare-Misc/wppatterns/Glare_pattern_dark-01.png
+	ln -s ../themes/Glare-Misc/wppatterns/Glare_pattern_trans-01.png
+	mkdir -p "$filedir"/usr/share/wallpapers
+	cd "$filedir"/usr/share/wallpapers
+	ln -s ../themes/Glare-Misc/wppatterns/Glare_pattern_dark-01.png
+	ln -s ../themes/Glare-Misc/wppatterns/Glare_pattern_dark-01.png.desktop
+	##kde desktop is too limited for this
+	#ln -s ../themes/Glare-Misc/wppatterns/Glare_pattern_trans-01.png
+	#ln -s ../themes/Glare-Misc/wppatterns/Glare_pattern_trans-01.png.desktop
+#aurorae
+	mkdir -p "$filedir"/usr/share/kde4/apps/aurorae/themes
+	cd "$filedir"/usr/share/kde4/apps/aurorae/themes
+	ln -s ../../../../themes/Glare-Misc/Aurorae/Glare
+##configs
+#compton
+	mkdir -p "$filedir"/etc/xdg
+	cd "$filedir"/etc/xdg
+	mv ../../usr/share/themes/Glare-Misc/compton-config/compton.conf compton.conf
+#trolltech
+	mv ../../usr/share/themes/Glare-Misc/qt4-colorscheme/Trolltech.conf Trolltech.conf
+#kvantum
+	mkdir ../kvantum/
+	printf "[General]\ntheme=Glare" > ../kvantum/kvantum.kvconfig
+#colorchange
+	cd "$filedir"/usr/share/themes/Glare-Misc
 	printf "Would you like to change the highlight/selection color now?: [y/N] \n"
 	read input
 	case $input in
@@ -136,7 +171,7 @@ EOF
 install_depends() {
 	dpkg --get-selections | awk '{if ($2 == "install") print $1}' > "$basedir"/installed
 	printf "trying to install build dependencies\n"
-	su-to-root -c "aptitude update; aptitude -Ry install $pkgmakedepends $pkgdepends $scriptdepends"
+	su-to-root -c "aptitude update; aptitude -R install $pkgmakedepends $pkgdepends $scriptdepends"
 	dpkg --get-selections | awk '{if ($2 == "install") print $1}' > "$basedir"/installed-new
 }
 clean(){
@@ -161,7 +196,7 @@ create_debfiles
 cd "${builddir}";build
 cd "${basedir}";package
 hostarch=$(dpkg-architecture -qDEB_HOST_ARCH)
-cd "${basedir}";clean
+cd "${basedir}"
 if [ -f ../${pkgname}_${pkgver}-1_${hostarch}.deb ]; then
 printf "Would you like to install the package now? [N/y]"; read ny
 	case $ny in
@@ -178,5 +213,6 @@ printf "Would you like to install the package now? [N/y]"; read ny
 			printf "skipped\n";;
 	esac
 fi
+clean
 printf "\n\n\ndone\n\n\n"
 sleep 5
