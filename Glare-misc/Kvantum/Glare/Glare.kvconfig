@@ -28,6 +28,8 @@ merge_menubar_with_toolbar=false
 popup_blurring=false
 vertical_spin_indicators=false
 fill_rubberband=true
+progressbar_thickness=7
+scroll_arrows=false
 
 [MenuBarItem]
 interior.element=menubaritem
