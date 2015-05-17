@@ -16,7 +16,7 @@ A bright theme that was mainly started as GUI theme for my [Ivy](https://github.
 * LXQt theme
 * QMMP / Winamp 2.x skin
 * Aurorae theme
-* Firefox (or any other XUL app) menubar fix
+* Firefox/Thunderbird menubar fix
 
 ### How to:
 
