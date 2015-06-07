@@ -1,0 +1,11 @@
+[X-GNOME-Metatheme]
+Name=Glare
+Type=X-GNOME-Metatheme
+Comment=Bright theme for maximum battery life
+Encoding=UTF-8
+GtkTheme=Glare
+MetacityTheme=Glare
+IconTheme=Ivy
+CursorTheme=DMZ-Black
+CursorSize=24
+NotificationTheme=slider
