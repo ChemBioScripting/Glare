@@ -1,4 +1,4 @@
-PKGBUILDS can be found in the AUR:
+PKGBUILDS can be found in the AUR: (currently not updated due AUR4...)
 
 * [Glare-main](https://aur.archlinux.org/packages/gtk-theme-glare-svn)
 * [Glare-misc](https://aur.archlinux.org/packages/glare-theme-misc-svn)
