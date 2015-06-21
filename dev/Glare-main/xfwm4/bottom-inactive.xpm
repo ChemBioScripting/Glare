@@ -1,1 +1,6 @@
-bottom-active.xpm
+/* XPM */
+static char * bottom_inactive_xpm[] = {
+"1 1 2 1",
+" 	c None",
+".	c #407DEC",
+"."};

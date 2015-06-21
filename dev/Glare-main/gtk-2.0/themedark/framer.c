@@ -48,15 +48,15 @@ image
 {
 function=SHADOW_GAP
 shadow=NONE
-file="../themedark/images/trans.svg"
+file="../theme/images/trans.svg"
 stretch=FALSE
-gap_start_file="../themedark/images/trans.svg"
-gap_end_file="../themedark/images/trans.svg"
+gap_start_file="../theme/images/trans.svg"
+gap_end_file="../theme/images/trans.svg"
 }}}
 class"GtkFrame"style"gtkframe"
 
 style"gtkframe2"{
-fg[NORMAL]=@activewindowtext
+fg[NORMAL]=@windowtext
 font_name="bold"}
 widget_class"*GtkFrame.GtkLabel"style"gtkframe2"
 

@@ -34,7 +34,7 @@ engine"pixmap"{
 image{
 function=SHADOW
 shadow=IN
-file="../theme/images/thunar_iconview_border.svg"
+file="../themedark/images/thunar_iconview_border.svg"
 stretch=TRUE
 border={0,0,0,1}}}}
 widget_class "*ThunarIconView*"style "thunariconview"

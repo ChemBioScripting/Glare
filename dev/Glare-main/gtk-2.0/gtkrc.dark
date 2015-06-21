@@ -1,5 +1,5 @@
 ### this is only here because of the broken color loading in xfce-settings 4.12
-gtk-color-scheme = "bg_color:333\nselected_bg_color:#407dec\nfg_color:#888"
+gtk-color-scheme = "bg_color:#333\nselected_bg_color:#407dec\nfg_color:#888"
 ################################################################################
 ### def ==> use bright theme as base
 ###colors
@@ -44,3 +44,5 @@ include "settings.ini"
 # https://wiki.gnome.org/Attic/GnomeArt/Tutorials/GtkThemes
 # https://wiki.gnome.org/Attic/GnomeArt/Tutorials/GtkEngines/PixmapEngine
 # https://developer.gnome.org/gtk2/stable/index.html
+
+

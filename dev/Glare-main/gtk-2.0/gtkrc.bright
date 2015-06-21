@@ -1,5 +1,5 @@
 ### this is only here because of the broken color loading in xfce-settings 4.12
-gtk-color-scheme = "bg_color:fbfbfb\nselected_bg_color:#407dec\nfg_color:#5a5a5a"
+gtk-color-scheme = "bg_color:#fbfbfb\nselected_bg_color:#407dec\nfg_color:#5a5a5a"
 ################################################################################
 ###colors
 include "theme/colors.ini"
