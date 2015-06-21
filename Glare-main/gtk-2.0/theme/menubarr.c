@@ -19,14 +19,14 @@ image{
 function=SHADOW
 shadow=NONE
 orientation=HORIZONTAL
-file="../images/menubar_horizontal.svg"
+file="../theme/images/menubar_horizontal.svg"
 border={0,0,1,2}
 stretch=TRUE}
 image{
 function=SHADOW
 shadow=NONE
 orientation=VERTICAL
-file="../images/menubar_vertical.svg"
+file="../theme/images/menubar_vertical.svg"
 border={2,1,0,0}
 stretch=TRUE}}}
 class"GtkMenuBar"style"gtkmenubar"

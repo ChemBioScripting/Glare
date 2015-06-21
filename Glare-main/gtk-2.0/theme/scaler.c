@@ -7,19 +7,19 @@ engine"pixmap"{
 image{
 function=BOX
 orientation=HORIZONTAL
-file="../images/scale-horizontal_trough.svg"
+file="../theme/images/scale-horizontal_trough.svg"
 stretch=TRUE
 border={3,3,6,6}}
 image{
 function=BOX
 orientation=VERTICAL
 detail="trough"
-file="../images/scale-vertical_trough.svg"
+file="../theme/images/scale-vertical_trough.svg"
 stretch=TRUE
 border={6,6,3,3}}
 image{
 function=SLIDER
-overlay_file="../images/scale_slider.svg"
+overlay_file="../theme/images/scale_slider.svg"
 overlay_stretch=FALSE}}}
 class"GtkScale"style"gtkscale"
 
@@ -35,12 +35,12 @@ engine"pixmap"{
 image{
 function=BOX
 detail="trough"
-file="../images/scale-vertical_trough.svg"
+file="../theme/images/scale-vertical_trough.svg"
 stretch=TRUE
 border={6,6,3,3}}
 image{
 function=SLIDER
-overlay_file="../images/scale_slider.svg"
+overlay_file="../theme/images/scale_slider.svg"
 overlay_stretch=FALSE}}}
 widget"*GtkVScale"style"gtkvscale"
 
@@ -55,12 +55,12 @@ engine"pixmap"{
 image{
 function=FLAT_BOX
 detail="trough"
-file="../images/scale-horizontal_trough.svg"
+file="../theme/images/scale-horizontal_trough.svg"
 stretch=TRUE
 border={3,3,6,6}}
 image{
 function=SLIDER
-overlay_file="../images/scale_slider.svg"
+overlay_file="../theme/images/scale_slider.svg"
 overlay_stretch=FALSE}}}
 widget"*GtkHScale"style"gtkhscale"
 

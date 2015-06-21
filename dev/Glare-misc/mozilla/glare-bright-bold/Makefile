@@ -14,6 +14,6 @@ glarebold.xpi: $(CONTENT)
 	mv glarebold.xpi ..
 
 clean:
-	rm -f glarebold.xpi
+	rm -f ../glarebold.xpi
 
 .PHONY: all dist clean

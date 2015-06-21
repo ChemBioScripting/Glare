@@ -1,6 +1,10 @@
 /* XPM */
-static char * dadada_xpm[] = {
-"1 1 2 1",
+static char * bottom_left_active_xpm[] = {
+"10 5 2 1",
 " 	c None",
-".	c #ff00ff s active_hilight_2",
-"."};
+".	c #407DEC",
+"..........",
+"..........",
+"..........",
+"..........",
+".........."};

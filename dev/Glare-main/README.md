@@ -7,6 +7,7 @@
 - Link the extra WM themes: 
 
 ```
+ln -s Glare/extras/wmthemes/Glare-default #the old bright default wm theme
 ln -s Glare/extras/wmthemes/Glare-cupertino
 ln -s Glare/extras/wmthemes/Glare-cupertino-dusK #only for xfwm
 ln -s Glare/extras/wmthemes/Glare-cupertino-dusK-x1.5 #only for xfwm

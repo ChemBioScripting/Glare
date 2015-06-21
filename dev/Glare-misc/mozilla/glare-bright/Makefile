@@ -15,6 +15,6 @@ glarelight.xpi: $(CONTENT)
 
 
 clean:
-	rm -f glarelight.xpi
+	rm -f ../glarelight.xpi
 
 .PHONY: all dist clean

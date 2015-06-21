@@ -28,14 +28,14 @@ engine"pixmap"
 image
 {
 function=SHADOW
-file="../images/trans.svg"
+file="../theme/images/trans.svg"
 stretch=FALSE
 }
 image
 {
 function=BOX
 detail="trough"
-file="../images/progressbar_trough.svg"
+file="../theme/images/progressbar_trough.svg"
 border={3,3,3,3}
 stretch=TRUE
 }
@@ -43,7 +43,7 @@ image
 {
 function=BOX
 detail="bar"
-file="../images/progressbar_progress.svg"
+file="../theme/images/progressbar_progress.svg"
 border={3,3,3,3}
 stretch=TRUE
 }}}

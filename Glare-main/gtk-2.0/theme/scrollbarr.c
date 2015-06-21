@@ -22,7 +22,7 @@ image
 function=BOX
 orientation=VERTICAL
 detail="trough"
-file="../images/scrollbar-vertical_trough.svg"
+file="../theme/images/scrollbar-vertical_trough.svg"
 border={1,0,0,0}
 stretch=TRUE
 }
@@ -31,7 +31,7 @@ image
 function=BOX
 orientation=HORIZONTAL
 detail="trough"
-file="../images/scrollbar-horizontal_trough.svg"
+file="../theme/images/scrollbar-horizontal_trough.svg"
 border={0,0,1,0}
 stretch=TRUE
 }
@@ -40,7 +40,7 @@ image
 function=SLIDER
 state=NORMAL
 orientation=VERTICAL
-file="../images/scrollbar-vertical_slider.svg"
+file="../theme/images/scrollbar-vertical_slider.svg"
 stretch=TRUE
 border={2,2,1,1}
 }
@@ -49,7 +49,7 @@ image
 function=SLIDER
 state=NORMAL
 orientation=HORIZONTAL
-file="../images/scrollbar-horizontal_slider.svg"
+file="../theme/images/scrollbar-horizontal_slider.svg"
 stretch=TRUE
 border={1,1,2,2}
 }
@@ -58,7 +58,7 @@ image
 function=SLIDER
 state=PRELIGHT
 orientation=VERTICAL
-file="../images/scrollbar-vertical_slider_prelight.svg"
+file="../theme/images/scrollbar-vertical_slider_prelight.svg"
 stretch=TRUE
 border={2,2,1,1}
 }
@@ -67,7 +67,7 @@ image
 function=SLIDER
 state=PRELIGHT
 orientation=HORIZONTAL
-file="../images/scrollbar-horizontal_slider_prelight.svg"
+file="../theme/images/scrollbar-horizontal_slider_prelight.svg"
 stretch=TRUE
 border={1,1,2,2}
 }

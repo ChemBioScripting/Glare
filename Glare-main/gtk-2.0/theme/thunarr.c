@@ -19,7 +19,7 @@ ythickness=0
 engine"pixmap"{
 image{
 function=FLAT_BOX
-file="../images/thunar_sidebar.svg"
+file="../theme/images/thunar_sidebar.svg"
 state=NORMAL
 stretch=TRUE
 border={0,1,0,0}}}}
@@ -34,7 +34,7 @@ engine"pixmap"{
 image{
 function=SHADOW
 shadow=IN
-file="../images/thunar_iconview_border.svg"
+file="../theme/images/thunar_iconview_border.svg"
 stretch=TRUE
 border={0,0,0,1}}}}
 widget_class "*ThunarIconView*"style "thunariconview"
