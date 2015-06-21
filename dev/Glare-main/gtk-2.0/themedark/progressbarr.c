@@ -35,7 +35,7 @@ image
 {
 function=BOX
 detail="trough"
-file="../theme/images/progressbar_trough.svg"
+file="../themedark/images/progressbar_trough.svg"
 border={3,3,3,3}
 stretch=TRUE
 }
@@ -43,7 +43,7 @@ image
 {
 function=BOX
 detail="bar"
-file="../theme/images/progressbar_progress.svg"
+file="../themedark/images/progressbar_progress.svg"
 border={3,3,3,3}
 stretch=TRUE
 }}}

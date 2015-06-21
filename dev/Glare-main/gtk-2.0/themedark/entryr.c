@@ -10,13 +10,13 @@ image{
 function=SHADOW
 shadow=IN
 state=NORMAL
-file="../theme/images/shadow.svg"
+file="../themedark/images/shadow.svg"
 border={1,1,1,1}
 stretch=TRUE}
 image{
 function=FOCUS
 detail="entry"
-file="../theme/images/shadow.svg"
+file="../themedark/images/shadow.svg"
 border={1,1,1,1}
 stretch=TRUE}}}
 class"GtkEntry"style"gtkentry"

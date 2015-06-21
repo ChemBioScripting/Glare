@@ -19,7 +19,7 @@ ythickness=0
 engine"pixmap"{
 image{
 function=FLAT_BOX
-file="../theme/images/thunar_sidebar.svg"
+file="../themedark/images/thunar_sidebar.svg"
 state=NORMAL
 stretch=TRUE
 border={0,1,0,0}}}}

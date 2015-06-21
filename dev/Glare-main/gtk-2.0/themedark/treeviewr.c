@@ -14,7 +14,7 @@ image
 {
 function=BOX
 shadow=OUT
-file="../theme/images/treeview_header.svg"
+file="../themedark/images/treeview_header.svg"
 border={0,1,0,1}
 stretch=TRUE
 }
@@ -22,7 +22,7 @@ image
 {
 function=BOX
 shadow=IN
-file="../theme/images/treeview_header.svg"
+file="../themedark/images/treeview_header.svg"
 border={0,1,0,1}
 stretch=TRUE
 }
