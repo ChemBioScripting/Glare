@@ -16,6 +16,7 @@ build() {
 	mkdir -p "$filedir"/usr/share/themes/Glare
 	mv "$builddir"/* "$filedir"/usr/share/themes/Glare
 	cd "$filedir"/usr/share/themes
+	ln -s Glare/gtk-2.0/dark Glare-dark
 	ln -s Glare/extras/wmthemes/Glare-default
 	ln -s Glare/extras/wmthemes/Glare-cupertino
 	ln -s Glare/extras/wmthemes/Glare-cupertino-dusK-x1.5

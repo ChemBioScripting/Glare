@@ -4,6 +4,12 @@
 
 ```svn co https://github.com/sixsixfive/Glare/trunk/Glare-main Glare```
 
+- Link the Dark GTK2 theme:
+
+```
+ln -s Glare/gtk-2.0/dark Glare-dark
+```
+
 - Link the extra WM themes: 
 
 ```
@@ -55,7 +61,6 @@ for GTK3 create a file ${XDG_CONFIG_HOME}/gtk-3.0/settings.ini with the followin
 gtk-theme-name=Glare
 gtk-icon-theme-name=Ivy
 gtk-application-prefer-dark-theme=false
-gtk-button-images=true
 gtk-menu-images=true
 ```
 *Note there are many more settings for each GTK toolkit: [GTK2](https://developer.gnome.org/gtk2/stable/GtkSettings.html#GtkSettings.properties), [GTK3](https://developer.gnome.org/gtk3/stable/GtkSettings.html#GtkSettings)*
@@ -66,6 +71,29 @@ gtk-menu-images=true
 
     ${themedir}/Glare/gtk-2.0/settings.ini
     ${themedir}/Glare/gtk-3.0/settings.css
+
+#### Launch Applications with the dark theme:
+
+#####GTK2
+
+```
+GTK2_RC_FILES=~/.themes/Glare-dark/gtkrc $app
+```
+
+#####GTK3
+
+```
+GTK_THEME=Glare:dark $app
+```
+
+If you want to use the dark GTK3 theme everywhere add:
+
+```
+[Settings]
+gtk-theme-name=Glare
+gtk-application-prefer-dark-theme=true
+```
+to your ${XDG_CONFIG_HOME}/gtk-3.0/settings.ini.
 
 #### Xfce/Xfwm
 
